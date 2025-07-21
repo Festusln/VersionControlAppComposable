@@ -64,7 +64,7 @@ fun RepoSearchScreen(navController: NavController,
             val error = (repoSearchResponse as ResourceState.Error).data
             println("repo search error: $error")
             Toast.makeText(context, error, Toast.LENGTH_SHORT).show()
-//            navController.popBackStack()
+            navController.popBackStack()
         }
 
 

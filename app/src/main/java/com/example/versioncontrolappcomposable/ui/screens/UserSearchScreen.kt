@@ -1,8 +1,6 @@
 package com.example.versioncontrolappcomposable.ui.screens
 
 import android.widget.Toast
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
@@ -89,7 +87,7 @@ fun UserSearchScreen(navController: NavController,
                                 } else {
                                     println("user list empty")
                                     Toast.makeText(context, error, Toast.LENGTH_SHORT).show()
-//                                    navController.popBackStack()
+                                    navController.popBackStack()
                                     break
                                 }
 
@@ -111,7 +109,7 @@ fun UserSearchScreen(navController: NavController,
             val error = (userSearchResponse as ResourceState.Error).data
             println("User search Error: $error")
             Toast.makeText(context, error, Toast.LENGTH_SHORT).show()
-//            navController.popBackStack()
+            navController.popBackStack()
         }
 
 
